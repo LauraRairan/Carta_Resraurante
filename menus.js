@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const productList = document.getElementById("product-list");
     const totalProducts = document.getElementById("total-products");
-    const val_t_prodcut = document.getElementById("val_t_prodcut");  // Total producto sin envío
-    const envioEl = document.getElementById("Envio");               // Costo de envío
+    const val_t_prodcut = document.getElementById("val_t_prodcut");  // Total producto sin envío
+    const envioEl = document.getElementById("Envio");               // Costo de envío
     const totalPrice = document.getElementById("total-price");
-    const shippingCost = 5000; // Valor fijo de envío ($5.000)
+    const shippingCost = 5000; // Valor fijo de envío ($5.000)
 
     function updateCartDisplay() {
         productList.innerHTML = "";
@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         totalProducts.textContent = quantity;
-        val_t_prodcut.textContent = $${total.toLocaleString()};
-        envioEl.textContent = $${shippingCost.toLocaleString()};
-        totalPrice.textContent = $${(total + shippingCost).toLocaleString()};
+        val_t_prodcut.textContent = `$${total.toLocaleString()}`;
+        envioEl.textContent = `$${shippingCost.toLocaleString()}`;
+        totalPrice.textContent = `$${(total + shippingCost).toLocaleString()}`;
     }
 
     // Funcionalidad para agregar productos desde menus.html (sin cambios)
@@ -105,15 +105,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const finalEnvio = envioEl.textContent;
             const finalTotalPrice = totalPrice.textContent;
 
-            // Mensaje de confirmación
-            alert("Su compra ha sido finalizada, en un momento nuestro repartidor llevará su pedido.");
+            // Mensaje de confirmación
+            alert("Su compra ha sido finalizada, en un momento nuestro repartidor llevará su pedido.");
 
             // Limpiamos el carrito
             localStorage.removeItem("cart");
             cart.length = 0;
             updateCartDisplay();
 
-            // Creamos y mostramos un resumen final en la sección de resumen, debajo de la información del cliente
+            // Creamos y mostramos un resumen final en la sección de resumen, debajo de la información del cliente
             const cartSummary = document.querySelector(".cart-summary");
             const finalSummary = document.createElement("div");
             finalSummary.classList.add("final-summary");
