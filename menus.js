@@ -1,17 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const productList = document.getElementById("product-list");
+document.addEventListener("DOMContentLoaded", () => { // carga el contenido del documento html antes de ejecutar el codigo
+    //Se almacenan referencias a los elementos HTML que mostrarán los productos, cantidades, costos y total.
+    const cart = JSON.parse(localStorage.getItem("cart")) || []; // JSON formato de intercambio de datos 
+    const productList = document.getElementById("product-list"); // Obtiene elementos de la interfaz, para mostrar los productos, cantidades y precios
     const totalProducts = document.getElementById("total-products");
     const val_t_prodcut = document.getElementById("val_t_prodcut");  // Total producto sin envío
     const envioEl = document.getElementById("Envio");               // Costo de envío
     const totalPrice = document.getElementById("total-price");
     const shippingCost = 5000; // Valor fijo de envío ($5.000)
 
+    //Vacía la lista de productos en pantalla y reinicia los valores del total y la cantidad de productos.
     function updateCartDisplay() {
         productList.innerHTML = "";
         let total = 0;
         let quantity = 0;
-
+    //
         cart.forEach((item, index) => {
             const itemElement = document.createElement("div");
             itemElement.classList.add("product");
