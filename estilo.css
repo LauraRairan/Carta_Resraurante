@@ -54,7 +54,7 @@ nav a:hover, nav button:hover {
     place-items: center;
     min-height: 80vh;
     padding: 2rem;
-    background-image: url(fondo1.jpg);
+    background-image: url(./fondo1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
