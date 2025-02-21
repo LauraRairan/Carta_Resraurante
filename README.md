@@ -1,7 +1,7 @@
 # Nuestro Proyecto Web - Carta Interactiva de un Restaurante 🌐
 
-- Maria Fernanda Rodriguez Chaparro
-- Laura Valentina Rairan Gavilan
+- Maria Fernanda Rodriguez Chaparro 💻🔍
+- Laura Valentina Rairan Gavilan 💻🔍
 
 Este es un proyecto de una página web creada con **HTML, CSS y JavaScript**.
 
